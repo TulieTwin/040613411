@@ -10,12 +10,16 @@
             input:valid{
                 color:green;
             }
+            .button{
+                margin-top: 20px;
+            }
         </style>
     </head>
 
     <body>
         <form action="form-echo.php">
             <h2>Form pattern attriibute testing</h2>
+            <hr>
         <span>
             <p> Slide 33 Example:</p>
             <input
@@ -28,33 +32,35 @@
         <h2>1. เป็นสระในภาษาอังกฤษเท่านั้นและมีได้ 3 ตัว</h2>
         <input
             type="text"
-            name="3eng"
-            placeholder="3 english only"
+            name="ariou"
+            placeholder="aeiou"
             pattern="[aeiou][aeiou][aeiou]">
         <h2>2. ขึ้นต้นด้วยพิมพ์ใหญ่ ที่เหลือเป็นอักษรพิมพ์เล็กตั้งแต่ 1 ตัวขึ้นไป</h2>
         <input
             type="text"
-            name="3eng"
-            placeholder="3 english only"
+            name="Xx"
+            placeholder="Xx..."
             pattern="[A-Z][a-z]+">
         <h2>3. ขึ้นต้นด้วย ord หรือ order ลงท้ายด้วยเลข 5 ตัว</h2>
         <input
             type="text"
-            name="3eng"
-            placeholder="3 english only"
+            name="ord"
+            placeholder="ord/ordernnnnn"
             pattern="(ord|order)\d{5}">
         <h2>4. เป็นคำว่า frog หรือ blog หรือ clog เท่านั้น</h2>
         <input
             type="text"
-            name="3eng"
-            placeholder="3 english only"
+            name="fbc"
+            placeholder="frog/blog/clog"
             pattern="(frog|blog|clog)+">
         <h2>Bonus. เป็นรหัสนักศึกษา cs เท่านั้น</h2>
         <input
             type="text"
-            name="3eng"
-            placeholder="3 english only"
+            name="CSnum"
+            placeholder="xxxxxxxxxxxxx"
             pattern="\d{2}0406\d{7}">
+        <br>
+        <input class="button" type="submit" value="Submit">
         </form>
     </body>
 </html>
