@@ -30,31 +30,32 @@
     </style>
     </head>
     <body>
-        <form>
+        <form action="form-echo.php">
             <h4 style="margin: 5px;">แบบฟอร์มจองทัวร์</h4>
             <fieldset>
                 <legend>ข้อมูลทั่วไป</legend>
                 <label>ชื่อ-สกุล:</label><br>
                 <input
                 type="text"
-                name="name-sur"
-                ><br>
+                name="user-name"
+                ><label>*</label><br>
                 <label>Email:</label><br>
                 <input
                 type="email"
                 name="user-email"
-                ><br>
+                ><label>*</label><br>
                 <label>โทรศัพท์:</label><br>
                 <input
                 type="tel"
-                name="user-tel"><br>
+                name="user-tel"
+                ><label>*</label><br>
                 <label>ที่อยู่:</label><br>
                 <textarea name="user-address" rows="10" cols="30"> </textarea><br>
                 <label>รหัสไปรษณี:</label>
                 <input
                 type="text"
                 name="post-code"
-                pattern="[a-z]{1,15}"><br>
+                pattern="[0-9]{5}"><br>
                 <label>รูปผู้จอง:</label>
                 <input
                 type="file"
@@ -67,22 +68,24 @@
                 <input
                 type="text"
                 name="username"
+                pattern="[A-Za-z0-9_]{8,}"
                 ><br>
                 <label>Password:</label><br>
                 <input
                 type="password"
                 name="password"
+                pattern="{8,}"
                 ><br>
             </fieldset>
             <fieldset>
                 <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
                 <label>แพคเก็จทัวร์:</label>
                 <select name="package">
-                    <option value="puket">ภูเก็ต</option>
-                    <option value="bangkok">กรุงเทพ</option>
-                    <option value="nonthaburi">นนทบุรี</option>
-                    <option value="ayuthaya">อยุธยา</option>
-                    <option value="lopburi">ลพบุรี</option>
+                    <option value="america">America</option>
+                    <option value="london">London</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="china">China</option>
+                    <option value="brazil">Brazil</option>
                 </select><br>
                 <label>วันที่เดินทาง:</label>
                 <input
@@ -96,8 +99,20 @@
                 min="1"
                 max="10"
                 ><br>
-                <label>เน้นการท่องเที่ยงแบบใด?</label>
+                <label>เน้นการท่องเที่ยงแบบใด?</label><br>
+                <input type="checkbox" id="activity1">
+                <label for="activity1">ช็อปปิ้ง</label><br>
+                <input type="checkbox" id="activity2">
+                <label for="activity2">ธรรมชาติ</label><br>
+                <input type="checkbox" id="activity3">
+                <label for="activity3">ทะเล</label><br>
             </fieldset>
+            <label>ยอมรับเงื่อนไขและข้อตกลง</label>
+            <input type="radio" id="accept" checked="checked">
+            <label for="accept">I agree</label>
+            <input type="radio" id="deniel">
+            <label for="deniel">I disagree</label>
+            <input type="submit" value="จอง">
         </form>
     </body>
 </html>
