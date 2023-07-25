@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input Type</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        label{
+            margin: 5px;
+        }
+        input{
+            margin: 5px;
+            padding: 2px;
+        }
+        textarea{
+            margin: 5px;
+            padding: 2px;
+        }
+        fieldset{
+            margin: 10px 5px 5px 5px;
+        }
+        legend{
+            margin: 4px;
+        }
+    </style>
+    </head>
+    <body>
+        <form>
+            <h4 style="margin: 5px;">แบบฟอร์มจองทัวร์</h4>
+            <fieldset>
+                <legend>ข้อมูลทั่วไป</legend>
+                <label>ชื่อ-สกุล:</label><br>
+                <input
+                type="text"
+                name="name-sur"
+                ><br>
+                <label>Email:</label><br>
+                <input
+                type="email"
+                name="user-email"
+                ><br>
+                <label>โทรศัพท์:</label><br>
+                <input
+                type="tel"
+                name="user-tel"><br>
+                <label>ที่อยู่:</label><br>
+                <textarea name="user-address" rows="10" cols="30"> </textarea><br>
+                <label>รหัสไปรษณี:</label>
+                <input
+                type="text"
+                name="post-code"
+                pattern="[a-z]{1,15}"><br>
+                <label>รูปผู้จอง:</label>
+                <input
+                type="file"
+                name="user-pic"
+                ><br>
+            </fieldset>
+            <fieldset>
+                <legend>ข้อมูลเข้าสู่ระบบ</legend>
+                <label>Username:</label><br>
+                <input
+                type="text"
+                name="username"
+                ><br>
+                <label>Password:</label><br>
+                <input
+                type="password"
+                name="password"
+                ><br>
+            </fieldset>
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+                <label>แพคเก็จทัวร์:</label>
+                <select name="package">
+                    <option value="puket">ภูเก็ต</option>
+                    <option value="bangkok">กรุงเทพ</option>
+                    <option value="nonthaburi">นนทบุรี</option>
+                    <option value="ayuthaya">อยุธยา</option>
+                    <option value="lopburi">ลพบุรี</option>
+                </select><br>
+                <label>วันที่เดินทาง:</label>
+                <input
+                type="date"
+                name="date-travel"
+                ><br>
+                <label>จำนวนผู้เดินทาง:</label>
+                <input
+                type="number"
+                name="no-passager"
+                min="1"
+                max="10"
+                ><br>
+                <label>เน้นการท่องเที่ยงแบบใด?</label>
+            </fieldset>
+        </form>
+    </body>
+</html>
