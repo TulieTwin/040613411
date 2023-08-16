@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function showlist(){
+                var s1 = document.getElementById("song1");
+                var s2 = document.getElementById("song2");
+                var s3 = document.getElementById("song3");
+                s1.innerHTML = "เรือเล็กควรออกจากฝั่ง - Bodyslam";
+                s2.innerHTML = "คำถามซึ่งไร้คำตอบ - Getsunova";
+                s3.innerHTML = "โปรดเถิดรัก - Cocktail";
+            }
+            window.onload = function(){
+                var headlist = document.getElementsByTagName("h1");
+                headlist.onclick = showlist;
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Top Chart</h1>
+        <ul id="playlist">
+            <li id="song1"></li>
+            <li id="song2"></li>
+            <li id="song3"></li>
+        </ul>
+    </body>
+</html>

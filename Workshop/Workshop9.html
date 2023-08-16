@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var addBut = document.getElementById("addbutton");
+            addBut.onclick = add;
+        }
+        function add() {
+            let inname = document.getElementById("name");
+            let inaddress = document.getElementById("address");
+            let inphone = document.getElementById("phone");
+            let name = inname.value;
+            let address = inaddress.value;
+            let phone = inphone.value;
+            let row = document.createElement("tr");
+            let col1 = document.createElement("td");
+            col1.innerHTML = name;
+            let col2 = document.createElement("td");
+            col2.innerHTML = address;
+            let col3 = document.createElement("td");
+            col3.innerHTML = phone;
+            row.appendChild(col1);
+            row.appendChild(col2);
+            row.appendChild(col3);
+            let list = document.getElementById("cuslist");
+            list.appendChild(row);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>ชื่อลูกค้า :</label>
+        <input type="text" id="name"><br>
+        <label>ที่อยู่ :</label>
+        <input type="text" id="address"><br>
+        <label>โทรศัพท์ :</label>
+        <input type="text" id="phone"><br>
+        <input type="button" id="addbutton" value="เพิ่ม">
+    </form>
+
+    <table id="cuslist">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </tr>
+    </table>
+</body>
+</html>
