@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .column {
+        width: 48%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .rightside{
+        border-left: 1px solid black;
+    }
+    textarea{
+        width: 90%;
+        height: 150px
+    }
+    input{
+        margin: 10px 0 10px 0;
+    }
+    button{
+        margin-top: 10px;
+        padding: 5px 5px 5px 5px;
+    }
+    .right-element {
+        width: 100%;
+        text-align: right;
+    }
+</style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="column">
+                <label>Your Massage:</label><br>
+                <textarea></textarea><br>
+                <label>What do you think?</label><br>
+                <textarea></textarea>
+            </div>
+            <div class="column rightside">
+                <div class="right-element">
+                    <input type="file" id="stamp">
+                </div><br>
+                <label>to:</label>
+                <input type="text" id="to"><br>
+                <label>from: </label>
+                <input type="text" id="from"><br>
+                <label>replay:</label>
+                <input type="text" id="reply"><br>
+                <button type="button">send a massage</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

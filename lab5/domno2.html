@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .completed {
+            color: green;
+        }
+    </style>
+    <script>
+        function handleNameInput(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('age').focus();
+            document.getElementById('name').classList.add('completed');
+        }
+    }
+    function handleAgeInput(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('bd').focus();
+            document.getElementById('age').classList.add('completed');
+        }
+    }
+    function handleBdInput(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            document.getElementById('bd').classList.add('completed');
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>Register</h1>
+    Name: <input type="text" id="name" onkeydown="handleNameInput(event)"><br>
+    Age: <input type="text" id="age" onkeydown="handleAgeInput(event)"><br>
+    Birthdate: <input type="text" id="bd" onkeydown="handleBdInput(event)"><br>
+</body>
+</html>
